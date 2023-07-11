@@ -3,6 +3,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:study_demo/widget/appbar.dart';
 
 class MagnifierPage extends StatefulWidget {
   const MagnifierPage({super.key});
@@ -14,14 +15,9 @@ class MagnifierPage extends StatefulWidget {
 class _MagnifierPageState extends State<MagnifierPage> {
   @override
   Widget build(BuildContext context) {
-    return Magnifier(
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text("DIY组件放大镜-Demo"),
-        ),
-        body: Image.asset("assets/images/girl.jpg"),
-      ),
+    return Scaffold(
+      appBar: StudyAppBar.MyAppBar("DIY组件放大镜-Demo", context),
+      body: Magnifier(child: Image.asset("assets/images/girl.jpg")),
     );
   }
 }

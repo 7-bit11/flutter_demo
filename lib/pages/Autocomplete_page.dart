@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:study_demo/widget/appbar.dart';
 
 class AutoCompletePage extends StatefulWidget {
   const AutoCompletePage({super.key});
@@ -15,11 +16,7 @@ class _AutoCompletePageState extends State<AutoCompletePage> {
       onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
       child: Scaffold(
         resizeToAvoidBottomInset: true,
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text("AutoComplete-Demo"),
-        ),
+        appBar: StudyAppBar.MyAppBar("AutoComplete-Demo", context),
         body: SingleChildScrollView(
           child: ListView(
             shrinkWrap: true,

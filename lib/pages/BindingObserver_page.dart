@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:study_demo/widget/appbar.dart';
 
 class BindingObserverPage extends StatefulWidget {
   const BindingObserverPage({super.key});
@@ -30,11 +31,7 @@ class _BindingObserverPageState extends State<BindingObserverPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("后台挂起页面模糊（安卓无效）-Demo"),
-      ),
+      appBar: StudyAppBar.MyAppBar("后台挂起页面模糊（安卓无效）-Demo", context),
       body: !ishidden
           ? Image.asset("assets/images/girl.jpg")
           : ImageFiltered(

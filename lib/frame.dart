@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:study_demo/pages/AnimatedContainer_page.dart';
+import 'package:study_demo/pages/AnimationController_page.dart';
 import 'package:study_demo/pages/Autocomplete_page.dart';
 import 'package:study_demo/pages/BindingObserver_page.dart';
+import 'package:study_demo/pages/Curves_page.dart';
 import 'package:study_demo/pages/Magnifier_page.dart';
+import 'package:study_demo/pages/RangeSlider_page.dart';
+import 'package:study_demo/pages/TweenAnimationBuidlder_page.dart';
+import 'package:study_demo/pages/TweenAnimationBuidlder_page1.dart';
 
 class FramePage extends StatelessWidget {
   const FramePage({super.key});
@@ -31,6 +36,20 @@ class FramePage extends StatelessWidget {
             const SizedBox(height: 20),
             getItem(
                 "AnimatedContainer-简单动画效果(隐式)", const AnimatedContainerPage()),
+            const SizedBox(height: 20),
+            getItem("Curves-线性动画", const CurvesPage()),
+            const SizedBox(height: 20),
+            getItem("拖动条-透明度", const RangeSliderPage()),
+            const SizedBox(height: 20),
+            getItem("TweenAnimationBuidlder-补间动画",
+                const TweenAnimationBuidlderPage()),
+            const SizedBox(height: 20),
+            getItem("TweenAnimationBuidlder-计数器",
+                const TweenAnimationBuidlderPage1()),
+            const SizedBox(height: 20),
+            getItem(
+                "AnimationController-动画控制器", const AnimationControllerPage()),
+            const SizedBox(height: 20),
           ],
         ));
   }

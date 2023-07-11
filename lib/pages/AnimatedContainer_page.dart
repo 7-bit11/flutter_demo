@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_demo/widget/appbar.dart';
 
 class AnimatedContainerPage extends StatefulWidget {
   const AnimatedContainerPage({super.key});
@@ -14,11 +15,7 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("AnimatedContainer简单动画-Demo"),
-      ),
+      appBar: StudyAppBar.MyAppBar("AnimatedContainer简单动画-Demo", context),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
