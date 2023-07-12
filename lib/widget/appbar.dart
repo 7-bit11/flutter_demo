@@ -3,11 +3,13 @@
 import 'package:flutter/material.dart';
 
 class StudyAppBar {
-  static PreferredSizeWidget MyAppBar(String title, BuildContext context) {
+  static PreferredSizeWidget MyAppBar(String title, BuildContext context,
+      {List<Widget>? actions}) {
     return AppBar(
       centerTitle: true,
       backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: Text(title),
+      actions: actions,
     );
   }
 }

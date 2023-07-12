@@ -1,4 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:study_demo/widget/appbar.dart';
 
 class TweenAnimationBuidlderPage1 extends StatefulWidget {

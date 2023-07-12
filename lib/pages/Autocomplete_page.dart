@@ -1,5 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:study_demo/widget/appbar.dart';
 
 class AutoCompletePage extends StatefulWidget {

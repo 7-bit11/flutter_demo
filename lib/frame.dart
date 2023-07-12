@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:study_demo/pages/AnimatedContainer_page.dart';
+import 'package:study_demo/pages/AnimationBuilder_page.dart';
 import 'package:study_demo/pages/AnimationController_page.dart';
+import 'package:study_demo/pages/AnimationController_page1.dart';
 import 'package:study_demo/pages/Autocomplete_page.dart';
 import 'package:study_demo/pages/BindingObserver_page.dart';
 import 'package:study_demo/pages/Curves_page.dart';
+import 'package:study_demo/pages/Hero/List_page.dart';
 import 'package:study_demo/pages/Magnifier_page.dart';
 import 'package:study_demo/pages/RangeSlider_page.dart';
 import 'package:study_demo/pages/TweenAnimationBuidlder_page.dart';
@@ -49,6 +51,13 @@ class FramePage extends StatelessWidget {
             const SizedBox(height: 20),
             getItem(
                 "AnimationController-动画控制器", const AnimationControllerPage()),
+            const SizedBox(height: 20),
+            getItem("AnimationBuilder-自定义动画", const AnimationBuilderPage()),
+            const SizedBox(height: 20),
+            getItem(
+                "AnimatedContainer-多个动画控制器", const AnimatedContainerPage1()),
+            const SizedBox(height: 20),
+            getItem("Hero-动画效果", const ListHeroPage()),
             const SizedBox(height: 20),
           ],
         ));
