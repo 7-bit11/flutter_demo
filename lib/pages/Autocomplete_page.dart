@@ -11,6 +11,7 @@ class AutoCompletePage extends StatefulWidget {
 }
 
 class _AutoCompletePageState extends State<AutoCompletePage> {
+  final SearchController controller = SearchController();
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -23,6 +24,45 @@ class _AutoCompletePageState extends State<AutoCompletePage> {
             shrinkWrap: true,
             padding: const EdgeInsets.all(8),
             children: [
+              Column(
+                children: [
+                  SearchAnchor(
+                      isFullScreen: false,
+                      searchController: controller,
+                      viewConstraints: const BoxConstraints(
+                          minWidth: 300, minHeight: 100.0, maxHeight: 200),
+                      builder:
+                          (BuildContext context, SearchController controller) {
+                        return IconButton(
+                          icon: const Icon(Icons.search),
+                          onPressed: () {
+                            controller.openView();
+                          },
+                        );
+                      },
+                      suggestionsBuilder:
+                          (BuildContext context, SearchController controller) {
+                        return List<ListTile>.generate(5, (int index) {
+                          final String item = 'item $index';
+                          return ListTile(
+                            title: Text(item),
+                            onTap: () {
+                              setState(() {
+                                Feedback.forTap(context);
+                                controller.closeView(item);
+                              });
+                            },
+                          );
+                        });
+                      }),
+                  Center(
+                    child: controller.text.isEmpty
+                        ? const Text('未选择')
+                        : Text('选择的值为: ${controller.value.text}'),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 50),
               const Text("区分大小写", style: TextStyle(fontSize: 18)),
               Autocomplete(
                 optionsBuilder: (textEditingValue) {
