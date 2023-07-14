@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class StudyAppBar {
   static PreferredSizeWidget MyAppBar(String title, BuildContext context,
-      {List<Widget>? actions}) {
+      {List<Widget>? actions, Key? key}) {
     return AppBar(
+      key: key,
       centerTitle: true,
       backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: Text(title),

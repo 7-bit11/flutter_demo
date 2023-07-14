@@ -8,6 +8,7 @@ import 'package:study_demo/pages/Autocomplete_page.dart';
 import 'package:study_demo/pages/BindingObserver_page.dart';
 import 'package:study_demo/pages/Curves_page.dart';
 import 'package:study_demo/pages/Hero/List_page.dart';
+import 'package:study_demo/pages/ListView_page.dart';
 import 'package:study_demo/pages/Magnifier_page.dart';
 import 'package:study_demo/pages/RangeSlider_page.dart';
 import 'package:study_demo/pages/ReorderableListView_page.dart';
@@ -60,8 +61,10 @@ class FramePage extends StatelessWidget {
             const SizedBox(height: 20),
             getItem("Hero-动画效果", const ListHeroPage()),
             const SizedBox(height: 20),
-            const SizedBox(height: 20),
             getItem("ReorderableListView-拖拽", const ReorderableListViewPage()),
+            const SizedBox(height: 20),
+            const SizedBox(height: 20),
+            getItem("ListView-跳转动画", const ListViewPage()),
             const SizedBox(height: 20),
           ],
         ));
