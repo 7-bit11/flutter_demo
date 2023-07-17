@@ -7,11 +7,14 @@ import 'package:study_demo/pages/AnimationController_page1.dart';
 import 'package:study_demo/pages/Autocomplete_page.dart';
 import 'package:study_demo/pages/BindingObserver_page.dart';
 import 'package:study_demo/pages/Curves_page.dart';
+import 'package:study_demo/pages/Dismissible_page.dart';
 import 'package:study_demo/pages/Hero/List_page.dart';
 import 'package:study_demo/pages/ListView_page.dart';
+import 'package:study_demo/pages/ListWheelScrollView_page.dart';
 import 'package:study_demo/pages/Magnifier_page.dart';
 import 'package:study_demo/pages/RangeSlider_page.dart';
 import 'package:study_demo/pages/ReorderableListView_page.dart';
+import 'package:study_demo/pages/Scrollable_Refresh_page.dart';
 import 'package:study_demo/pages/TweenAnimationBuidlder_page.dart';
 import 'package:study_demo/pages/TweenAnimationBuidlder_page1.dart';
 
@@ -63,9 +66,16 @@ class FramePage extends StatelessWidget {
             const SizedBox(height: 20),
             getItem("ReorderableListView-拖拽", const ReorderableListViewPage()),
             const SizedBox(height: 20),
-            const SizedBox(height: 20),
             getItem("ListView-跳转动画", const ListViewPage()),
             const SizedBox(height: 20),
+            getItem("Refresh-下拉刷新&上拉加载", const ScrollableRefreshPage()),
+            const SizedBox(height: 20),
+            getItem("Dismissible-左右滑动删除", const DismissiblePage()),
+            const SizedBox(height: 20),
+            getItem(
+                "ListWheelScrollView-3D列表", const ListWheelScrollViewPage()),
+            const SizedBox(height: 20),
+            const SizedBox(height: 100),
           ],
         ));
   }

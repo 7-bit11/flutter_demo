@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 
 class StudyAppBar {
   static PreferredSizeWidget MyAppBar(String title, BuildContext context,
-      {List<Widget>? actions, Key? key}) {
+      {List<Widget>? actions, Key? key, Color? backgroundColor}) {
+    backgroundColor ??= Theme.of(context).colorScheme.inversePrimary;
     return AppBar(
       key: key,
       centerTitle: true,
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      backgroundColor: backgroundColor,
       title: Text(title),
       actions: actions,
     );
