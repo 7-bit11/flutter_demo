@@ -16,9 +16,12 @@ import 'package:study_demo/pages/Magnifier_page.dart';
 import 'package:study_demo/pages/RangeSlider_page.dart';
 import 'package:study_demo/pages/ReorderableListView_page.dart';
 import 'package:study_demo/pages/Scrollable_Refresh_page.dart';
+import 'package:study_demo/pages/Shirne_page.dart';
 import 'package:study_demo/pages/SliverAppBar_page.dart';
 import 'package:study_demo/pages/TweenAnimationBuidlder_page.dart';
 import 'package:study_demo/pages/TweenAnimationBuidlder_page1.dart';
+import 'package:study_demo/pages/button_page.dart';
+import 'package:study_demo/pages/watermark_page.dart';
 
 class FramePage extends StatelessWidget {
   const FramePage({super.key});
@@ -77,6 +80,12 @@ class FramePage extends StatelessWidget {
           getItem("FutureBuilder-异步构建", const FutureBuilderPage()),
           const SizedBox(height: 20),
           getItem("SliverAppBar", const SliverAppBarPage()),
+          const SizedBox(height: 20),
+          getItem("ButtonPage-DIY各种按钮", const ButtonPage()),
+          const SizedBox(height: 20),
+          getItem("Watermark-水印", const WatermarkPage()),
+          const SizedBox(height: 20),
+          getItem("拖拽放大自定义组件", const Shirne()),
           const SizedBox(height: 20),
           const SizedBox(height: 100),
         ],
